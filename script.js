@@ -1,24 +1,24 @@
 //1
 let arr = [1, 2, 'sd', 13, 'ds'];
 
-let number = arr.map(string => parseInt(string));
-console.log(number);
-
-let numbers = [];
-
-number.forEach(
-    (elem) => {
-        if (isNaN(elem) == false) {
-            numbers.push(elem)
+function average(arr) {
+    let number = arr.map(string => parseInt(string));
+    console.log(number);
+    let numbers = [];
+    number.forEach(
+        (elem) => {
+            if (isNaN(elem) == false) {
+                numbers.push(elem)
+            }
         }
-    }
-);
-console.log(numbers);
+    );
+    console.log(numbers);
+    const sum = numbers.reduce((acc, number) => acc + number, 0);
+    const length = numbers.length;
+    return sum / length;
 
-function average(numbers) {
-    return numbers.reduce((a, b) => (a + b)) / numbers.length;
 }
-console.log(average(numbers));
+console.log(average(arr));
 
 //2 
 let x = Number(prompt('введіть перше число' , ''));
